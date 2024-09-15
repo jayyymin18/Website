@@ -92,6 +92,7 @@
             line-height: 1.8;
             color: #555;
             text-align: left;
+            cursor: pointer;
         }
 
         .highlight {
@@ -145,6 +146,22 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .bounce {
+            animation: bounce 1s;
         }
 
         @media (max-width: 600px) {
@@ -269,6 +286,15 @@
                     var modal = document.getElementById("myModal");
                     modal.style.display = "none";
                 }
+
+                document.querySelectorAll('p').forEach(function(paragraph) {
+                    paragraph.addEventListener('click', function() {
+                        paragraph.classList.add('bounce');
+                        setTimeout(function() {
+                            paragraph.classList.remove('bounce');
+                        }, 1000);
+                    });
+                });
             </script>
         </div>
     </div>
