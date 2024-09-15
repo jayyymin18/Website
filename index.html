@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Our Love Story</title>
     <style>
-        /* Basic resets */
         * {
             margin: 0;
             padding: 0;
@@ -21,9 +20,9 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* Full-screen image section */
         .hero {
             width: 100%;
             height: 100vh;
@@ -43,7 +42,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5);
         }
 
         .hero h1 {
@@ -52,11 +51,11 @@
             font-size: 3em;
             text-align: center;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1.5s ease-in-out;
         }
 
-        /* Story container */
         .container {
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             margin: -50px auto 50px;
             padding: 30px;
@@ -68,13 +67,13 @@
             overflow: hidden;
         }
 
-        /* Title section styling */
         h2 {
-            font-size: 2em;
+            font-size: 2.5em;
             color: #ff4081;
             margin-bottom: 20px;
             position: relative;
             font-weight: bold;
+            animation: fadeInUp 0.7s ease-in-out;
         }
 
         h2:after {
@@ -88,25 +87,11 @@
             bottom: -10px;
         }
 
-        /* Story sections */
-        .story-section {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #fff0f3;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.2);
-            animation: fadeInUp 0.5s ease-in-out;
-            transition: background 0.3s;
-        }
-
-        .story-section:hover {
-            background-color: #ffe0e9;
-        }
-
         p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.8;
             color: #555;
+            text-align: left;
         }
 
         .highlight {
@@ -114,26 +99,6 @@
             font-weight: bold;
         }
 
-        /* Subtle hover effects */
-        .container:hover:before {
-            right: 0;
-            opacity: 0.8;
-            transition: all 0.4s ease;
-        }
-
-        /* Fade In animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Gallery section */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -146,9 +111,42 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        /* Responsive media query */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -166,46 +164,52 @@
 </head>
 <body>
 
-    <!-- Hero Section with Image -->
+    <!-- Hero Section -->
     <div class="hero">
         <h1>Our Journey Together</h1>
     </div>
 
-    <!-- Love Story Container -->
+    <!-- Full Love Story -->
     <div class="container">
         <h2>Our Love Story</h2>
 
-        <div class="story-section">
-            <p>It all started on <span class="highlight">July 20th, 2024</span>, when I randomly messaged her "Hi" on Instagram. To my surprise, she replied within hours. I was shocked, excited, and completely nervous. She was my crush, someone I had noticed before but never had the courage to approach. I first saw her sister, who looked quite similar, at my cousin's wedding. But later, I found out she had a younger sister, the one who had captured my heart.</p>
-        </div>
+        <p>It all started on <span class="highlight">July 20th, 2024</span>, when I randomly messaged her "Hi" on Instagram. To my surprise, she replied within hours. I was shocked, excited, and completely nervous. She was my crush, someone I had noticed before but never had the courage to approach. I first saw her sister, who looked quite similar, at my cousin's wedding. But later, I found out she had a younger sister, the one who had captured my heart.</p>
 
-        <div class="story-section">
-            <p>We had crossed paths on a religious trip, and though I noticed her, I never dared to talk to her. And now, here she was, replying to my message. It took me two whole days to gather the courage to respond again. When I asked how she was, she casually replied, "Fine, what about you?" I nervously said, "Mast," and our conversation slowly began.</p>
-        </div>
+        <p>We had crossed paths on a religious trip, and though I noticed her, I never dared to talk to her. And now, here she was, replying to my message. It took me two whole days to gather the courage to respond again.</p>
 
-        <div class="story-section">
-            <p>As we kept chatting day and night, we got to know each other better. Both of us were from <span class="highlight">Bhavnagar, Gujarat</span>, from the same caste, and even lived in the same area! Coincidentally, she was moving to a new address – right opposite my home where my parents lived.</p>
-        </div>
+        <p>When I asked how she was, she casually replied, "Fine, what about you?" I nervously said, "Mast," and our conversation slowly began. She asked if I knew her, and I admitted I did, through someone else. Surprisingly, she said she also knew me through my friends. We soon discovered we had a lot in common. Both of us were from <span class="highlight">Bhavnagar, Gujarat</span>, from the same caste, and even lived in the same area! Coincidentally, she was moving to a new address – right opposite my home where my parents lived.</p>
 
-        <div class="story-section">
-            <p>Eventually, I convinced her to switch to iMessage, and that’s when she gave me her number. Three days later, out of the blue, she called me while I was busy with household chores. That first call lasted two hours, and from there, our chats grew longer into the night.</p>
-        </div>
+        <p>As we kept chatting day and night, we got to know each other better, though we hadn’t even heard each other’s voices yet. It was her birthday during this time, and I desperately wanted to be the first to wish her, but without her number, I felt stuck. I typed a long message but deleted it, feeling it was too much. Instead, I simply said, “Happy birthday 😊.”</p>
 
-        <!-- Image Gallery Section -->
+        <p>Eventually, I convinced her to switch to iMessage, and that’s when she gave me her number. But I was too scared to call her. Three days later, out of the blue, she called me while I was busy with household chores. She asked if I was free, and of course, I dropped everything to talk to her. That first call lasted two hours, and from there, our chats grew longer into the night.</p>
+
+        <p>We played fun games like “This or That,” where we’d give each other two options to choose from, and another imaginative game where we’d react to made-up situations. These games brought us even closer.</p>
+
+        <p>During a festival, I returned to Bhavnagar and wanted to meet her. We planned to meet late at night, and although she was hesitant, I convinced her. At midnight, I went to her apartment. She was so nervous that she didn’t even open the main door! We talked through the door for an hour, held hands, and I returned home. The next day, I asked her to visit my place when my parents were out. She came after what felt like an eternity, and we finally met in person. We talked, hugged, and, lost in the moment, shared our first kiss. It was a beautiful, unforgettable experience.</p>
+
+        <p>We continued talking through FaceTime, discussing how we felt. The next day, we went to a movie, holding hands throughout. At the interval, I asked her to sit with me, and though she hesitated, she agreed. We were so lost in each other that we barely noticed the movie after the break.</p>
+
+        <p>Our late-night meetups became more frequent. One time, while I was at her place, her younger brother was home. When he knocked on the door, I had to hide under the bed! Those 10 minutes felt like a lifetime. Another time, I had to hide in the balcony for hours until her brother finally fell asleep. We laughed about it later, but at the time, it was terrifying.</p>
+
+        <p>We continued meeting in secret, stealing moments whenever we could. One evening, she surprised me by showing up on my terrace. It started raining, and we stood together, watching the rain – a moment of peace amid the excitement of our blossoming relationship.</p>
+
+        <p>But like all relationships, ours had its challenges. My past sometimes came back to haunt me, and one day, my ex called. Vishwa, my girlfriend, was understandably upset, and we had our first fight. I took responsibility, apologized, and we worked through it.</p>
+
+        <p>We’ve shared so many beautiful moments since then. Recently, we went on a pizza date, taking the pizza to the highway to enjoy it in the car. As fate would have it, her elder sister spotted us. She was upset, as Vishwa hadn’t yet told her family about us. Now, I’m waiting to see what happens next, as her sister insisted she talk to their mom about us.</p>
+
+        <!-- Conclusion paragraph -->
+        <p><strong>Vishwa, from the day we started talking, my feelings for you have only grown stronger. I’ve imagined our future together, and it’s a future I desperately want with you by my side. Every moment with you feels like a blessing, and I don’t want to lose what we’ve built. I know we have challenges ahead, especially with our families, but I believe in us. I believe that if we work together, we can convince them of our love. Please, let’s try everything we can, let’s take this step together and show them that what we have is real and worth fighting for. I’m ready to do whatever it takes because I can’t imagine my life without you. You mean the world to me, and I want to build our future together – no matter what.</strong></p>
         
-        <div class="story-section">
-            <p>We've shared so many beautiful moments since then. Recently, we went on a pizza date, but her elder sister spotted us, and now, I'm waiting for her to talk to their family about us.</p>
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="2.JPG" alt="Image 2">
+            <img src="3.JPG" alt="Image 3">
+            <img src="4.JPG" alt="Image 4">
+            <img src="5.JPG" alt="Image 5">
+            <img src="6.JPG" alt="Image 6">
+            <img src="7.JPG" alt="Image 7">
         </div>
     </div>
     
-    <h2>Memorable Moments</h2>
-    <div class="gallery" style="overflow-x: scroll; white-space: nowrap;">
-        <img src="2.jpg" alt="Our moment 1" style="display: inline-block; height: 200px; width: 200px;">
-        <img src="3.JPG" alt="Our moment 2" style="display: inline-block; height: 200px; width: 200px;">
-        <img src="4.JPG" alt="Our moment 3" style="display: inline-block; height: 200px; width: 200px;">
-        <img src="5.JPG" alt="Our moment 4" style="display: inline-block; height: 200px; width: 200px;">
-        <img src="6.JPG" alt="Our moment 5" style="display: inline-block; height: 200px; width: 200px;">
-        <img src="7.jpeg" alt="Our moment 6" style="display: inline-block; height: 200px; width: 200px;">
-    </div>
 </body>
 </html>
