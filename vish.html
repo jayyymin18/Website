@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Our Love Story</title>
+    <style>
+        /* Basic resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Full-screen image section */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: url('1.jpeg') center center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Story container */
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: -50px auto 50px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Title section styling */
+        h2 {
+            font-size: 2em;
+            color: #ff4081;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: bold;
+        }
+
+        h2:after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: #ff4081;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        /* Story sections */
+        .story-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff0f3;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.2);
+            animation: fadeInUp 0.5s ease-in-out;
+            transition: background 0.3s;
+        }
+
+        .story-section:hover {
+            background-color: #ffe0e9;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .highlight {
+            color: #ff4081;
+            font-weight: bold;
+        }
+
+        /* Subtle hover effects */
+        .container:hover:before {
+            right: 0;
+            opacity: 0.8;
+            transition: all 0.4s ease;
+        }
+
+        /* Fade In animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gallery section */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 48%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive media query */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.7em;
+            }
+
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section with Image -->
+    <div class="hero">
+        <h1>Our Journey Together</h1>
+    </div>
+
+    <!-- Love Story Container -->
+    <div class="container">
+        <h2>Our Love Story</h2>
+
+        <div class="story-section">
+            <p>It all started on <span class="highlight">July 20th, 2024</span>, when I randomly messaged her "Hi" on Instagram. To my surprise, she replied within hours. I was shocked, excited, and completely nervous. She was my crush, someone I had noticed before but never had the courage to approach. I first saw her sister, who looked quite similar, at my cousin's wedding. But later, I found out she had a younger sister, the one who had captured my heart.</p>
+        </div>
+
+        <div class="story-section">
+            <p>We had crossed paths on a religious trip, and though I noticed her, I never dared to talk to her. And now, here she was, replying to my message. It took me two whole days to gather the courage to respond again. When I asked how she was, she casually replied, "Fine, what about you?" I nervously said, "Mast," and our conversation slowly began.</p>
+        </div>
+
+        <div class="story-section">
+            <p>As we kept chatting day and night, we got to know each other better. Both of us were from <span class="highlight">Bhavnagar, Gujarat</span>, from the same caste, and even lived in the same area! Coincidentally, she was moving to a new address – right opposite my home where my parents lived.</p>
+        </div>
+
+        <div class="story-section">
+            <p>Eventually, I convinced her to switch to iMessage, and that’s when she gave me her number. Three days later, out of the blue, she called me while I was busy with household chores. That first call lasted two hours, and from there, our chats grew longer into the night.</p>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <h2>Memorable Moments</h2>
+        <div class="gallery">
+            <img src="1.jpeg" alt="Our moment 1">
+            <img src="1.jpeg" alt="Our moment 2">
+            <!-- You can add more images similarly -->
+        </div>
+
+        <div class="story-section">
+            <p>We've shared so many beautiful moments since then. Recently, we went on a pizza date, but her elder sister spotted us, and now, I'm waiting for her to talk to their family about us.</p>
+        </div>
+    </div>
+
+</body>
+</html>
